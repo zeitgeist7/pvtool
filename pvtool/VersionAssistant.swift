@@ -44,21 +44,21 @@ struct VersionAssistant {
     static func bumpMajor() {
         let version = Version(using: currentVersion())
         let bumpedVersionText = version.bumpedMajor().text
-        _ = consoleHelper.shell("agvtool", "new-marketing-version", "-all", bumpedVersionText)
+        _ = consoleHelper.shell("agvtool", "new-marketing-version", bumpedVersionText)
         print(bumpedVersionText)
     }
     
     static func bumpMinor() {
         let version = Version(using: currentVersion())
         let bumpedVersionText = version.bumpedMinor().text
-        _ = consoleHelper.shell("agvtool", "new-marketing-version", "-all", bumpedVersionText)
+        _ = consoleHelper.shell("agvtool", "new-marketing-version", bumpedVersionText)
         print(bumpedVersionText)
     }
     
     static func bumpBugFix() {
         let version = Version(using: currentVersion())
         let bumpedVersionText = version.bumpedBugFix().text
-        _ = consoleHelper.shell("agvtool", "new-marketing-version", "-all", bumpedVersionText)
+        _ = consoleHelper.shell("agvtool", "new-marketing-version", bumpedVersionText)
         print(bumpedVersionText)
     }
     
